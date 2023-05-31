@@ -1,0 +1,12 @@
+domains
+    item=symbol
+    itemlist=item*
+    number=integer
+predicates
+    first(itemlist,item)
+    last(itemlist,item)
+clauses
+    first([X],X).
+    first([H|T],H).
+    last([X],X).
+    last([_|T],R):-last(T,R).

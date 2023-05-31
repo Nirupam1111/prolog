@@ -1,0 +1,11 @@
+domains
+    item=integer
+    itemlist=item*
+predicates
+    sort(itemlist,itemlist)
+    swap(itemlist,itemlist)
+clauses
+    sort(InputList,SortedList):-swap(InputList,List),!,sort(List,SortedList).
+    sort(SortedList,SortedList).
+    swap([X,Y|List],[Y,X|List]):-X>Y.
+    swap([Z|List],[Z|List1]):-swap(List,List1).

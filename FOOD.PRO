@@ -1,0 +1,20 @@
+domains
+    person,food=symbol
+predicates
+    foods(food)
+    eats(person,food)
+    likes(person,food)
+    human(person)
+clauses
+    foods(pizza).
+    foods(apple).
+    foods(X):-likes(marry,X).
+    eats(X,Y):-human(X),foods(Y).
+    eats(marry,X):-eats(anna,X).
+    eats(john,chicken).
+    likes(marry,apple).
+    likes(marry,pizza).
+    likes(marry,chicken).
+    human(marry).
+    human(john).
+    human(anna).

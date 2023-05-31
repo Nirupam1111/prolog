@@ -1,0 +1,18 @@
+domains
+    person=symbol
+predicates
+    grandfather(person,person)
+    parent(person,person)
+    father(person,person)
+    mother(person,person)
+clauses
+    grandfather(X,Y):-father(X,Z),parent(Z,Y).
+    parent(X,Y):-father(X,Y).
+    parent(X,Y):-mother(X,Y).
+    father(james,robert).
+    father(mike,willium).
+    father(robert,henry).
+    father(willium,james).
+    father(robert,cris).
+    mother(merry,james).
+    mother(julia,henry).
