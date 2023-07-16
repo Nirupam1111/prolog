@@ -1,0 +1,9 @@
+domains
+    item=symbol
+    itemlist=symbol*
+    number=integer
+predicates
+    length(itemlist,number)
+clauses
+    length([],0).
+    length([_|X],N):-length(X,N1),N=N1+1.

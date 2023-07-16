@@ -1,0 +1,12 @@
+domains
+    node=symbol
+predicates
+    edge(node,node)
+    route(node,node)
+clauses
+    route(X,Y):-edge(X,Y).
+    route(X,Y):-edge(X,Z),route(Z,Y).
+    edge(p,q).
+    edge(p,r).
+    edge(r,s).
+    edge(s,t).
